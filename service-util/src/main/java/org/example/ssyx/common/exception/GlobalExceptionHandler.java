@@ -1,6 +1,7 @@
 package org.example.ssyx.common.exception;
 
 
+//import org.example.common.result.Result;
 import org.example.ssyx.common.result.Result;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

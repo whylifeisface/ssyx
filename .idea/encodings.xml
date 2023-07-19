@@ -3,12 +3,18 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/common-util/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common-util/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/commonm/common-utils/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/commonm/common-utils/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/commonm/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/commonm/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/model/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/model/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-util/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-util/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/service-acl/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/service-acl/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/service-utils/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/service-utils/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />

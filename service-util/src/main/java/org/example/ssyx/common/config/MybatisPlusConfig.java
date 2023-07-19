@@ -1,4 +1,4 @@
-package org.example.ssyx.common.config;
+package org.example.common.config;
 
 
 import com.baomidou.mybatisplus.annotation.DbType;
