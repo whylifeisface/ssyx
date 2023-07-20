@@ -1,6 +1,6 @@
 package com.ssym.vo.order;
 
-import com.atguigu.ssyx.enums.SkuType;
+import com.ssym.enums.SkuType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

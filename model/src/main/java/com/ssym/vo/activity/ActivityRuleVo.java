@@ -1,7 +1,8 @@
 package com.ssym.vo.activity;
 
-import com.atguigu.ssyx.model.activity.ActivityRule;
-import com.atguigu.ssyx.model.activity.ActivitySku;
+
+import com.ssym.model.activity.ActivityRule;
+import com.ssym.model.activity.ActivitySku;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

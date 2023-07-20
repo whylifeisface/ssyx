@@ -1,4 +1,4 @@
-package org.example.common.config;
+package org.example.ssyx.common.config;
 
 
 import org.springframework.context.annotation.Bean;

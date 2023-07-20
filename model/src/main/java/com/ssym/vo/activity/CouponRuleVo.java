@@ -1,7 +1,7 @@
 package com.ssym.vo.activity;
 
-import com.atguigu.ssyx.enums.CouponRangeType;
-import com.atguigu.ssyx.model.activity.CouponRange;
+import com.ssym.enums.CouponRangeType;
+import com.ssym.model.activity.CouponRange;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

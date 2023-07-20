@@ -9,9 +9,8 @@
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/common-util/pom.xml" />
-        <option value="$PROJECT_DIR$/service-util/pom.xml" />
-        <option value="$PROJECT_DIR$/service/service-acl/pom.xml" />
+        <option value="$PROJECT_DIR$/commonm/common-utils/pom.xml" />
+        <option value="$PROJECT_DIR$/service/service-utils/pom.xml" />
       </set>
     </option>
   </component>

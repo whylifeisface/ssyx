@@ -1,7 +1,7 @@
 package com.ssym.vo.order;
 
-import com.atguigu.ssyx.model.activity.CouponInfo;
-import com.atguigu.ssyx.vo.user.LeaderAddressVo;
+import com.ssym.model.activity.CouponInfo;
+import com.ssym.vo.user.LeaderAddressVo;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 

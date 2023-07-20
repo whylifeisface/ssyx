@@ -1,7 +1,7 @@
 package com.ssym.vo.order;
 
-import com.atguigu.ssyx.model.activity.ActivityRule;
-import com.atguigu.ssyx.model.order.CartInfo;
+import com.ssym.model.activity.ActivityRule;
+import com.ssym.model.order.CartInfo;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 

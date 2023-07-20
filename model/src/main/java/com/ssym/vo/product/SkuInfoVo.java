@@ -1,10 +1,10 @@
 package com.ssym.vo.product;
 
-import com.atguigu.ssyx.model.product.*;
-import com.atguigu.ssyx.model.product.SkuAttrValue;
-import com.atguigu.ssyx.model.product.SkuImage;
-import com.atguigu.ssyx.model.product.SkuInfo;
-import com.atguigu.ssyx.model.product.SkuPoster;
+import com.ssym.model.product.*;
+import com.ssym.model.product.SkuAttrValue;
+import com.ssym.model.product.SkuImage;
+import com.ssym.model.product.SkuInfo;
+import com.ssym.model.product.SkuPoster;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 

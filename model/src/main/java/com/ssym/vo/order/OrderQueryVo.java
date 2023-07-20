@@ -1,6 +1,6 @@
 package com.ssym.vo.order;
 
-import com.atguigu.ssyx.enums.OrderStatus;
+import com.ssym.enums.OrderStatus;
 import lombok.Data;
 import io.swagger.annotations.ApiModelProperty;
 

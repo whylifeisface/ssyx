@@ -1,9 +1,9 @@
 package com.ssym.model.activity;
 
-import com.atguigu.ssyx.model.base.BaseEntity;
-import com.atguigu.ssyx.model.product.SkuInfo;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.ssym.model.base.BaseEntity;
+import com.ssym.model.product.SkuInfo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

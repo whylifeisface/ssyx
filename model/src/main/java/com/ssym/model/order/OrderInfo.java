@@ -1,11 +1,11 @@
 package com.ssym.model.order;
 
-import com.atguigu.ssyx.enums.OrderStatus;
-import com.atguigu.ssyx.enums.ProcessStatus;
-import com.atguigu.ssyx.model.base.BaseEntity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.ssym.enums.OrderStatus;
+import com.ssym.enums.ProcessStatus;
+import com.ssym.model.base.BaseEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
