@@ -13,6 +13,8 @@
     <file url="file://$PROJECT_DIR$/service-util/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/service-acl/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/service-acl/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/service-sys/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/service-sys/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/service-utils/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/service-utils/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/src/main/java" charset="UTF-8" />

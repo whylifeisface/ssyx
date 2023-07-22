@@ -15,6 +15,7 @@
     <modules>
         <module>service-utils</module>
         <module>service-acl</module>
+        <module>service-sys</module>
     </modules>
 
 
