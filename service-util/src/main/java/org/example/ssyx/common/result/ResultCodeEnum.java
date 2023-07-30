@@ -22,11 +22,13 @@ public enum ResultCodeEnum {
     COUPON_GET(220, "优惠券已经领取"),
     COUPON_LIMIT_GET(221, "优惠券已经发放完毕"),
 
-
+    REGION_OPEN(240, "该区域已开通"),
     URL_ENCODE_ERROR(216, "URL编码失败"),
     ILLEGAL_CALLBACK_REQUEST_ERROR(217, "非法回调请求"),
     FETCH_ACCESS_TOKEN_FAILED(218, "获取accessToken失败"),
     FETCH_USERINFO_ERROR(219, "获取用户信息失败");
+
+
     private Integer code;
     private String message;
 

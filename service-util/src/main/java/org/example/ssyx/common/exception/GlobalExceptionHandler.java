@@ -2,6 +2,7 @@ package org.example.ssyx.common.exception;
 
 
 //import org.example.common.result.Result;
+
 import org.example.ssyx.common.result.Result;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -13,20 +14,29 @@ public class GlobalExceptionHandler {
     // 结果转换为json 异常处理器
     @ResponseBody
     @ExceptionHandler(Exception.class)
-    public Result error(Exception e){
+    public Result error(Exception e) {
         e.printStackTrace();
         return Result.fail(null);
     }
 
 
-    /**自定义异常处理*/
+    /**
+     * 自定义异常处理
+     */
     /*
 
      */
+//    @ExceptionHandler(SsymException.class)
+//    @ResponseBody
+//    public Result error(SsymException exception) {
+//        return Result.fail(null);
+//    }
+
     @ExceptionHandler(SsymException.class)
     @ResponseBody
-    public Result error(SsymException exception){
-        return Result.fail(null);
+    public Result error(SsymException exception) {
+//        return Result.build(null, exception.getCode(), exception.getMessage());
+        return Result.build(null,exception.getCode(), exception.getMessage());
     }
 
 }
