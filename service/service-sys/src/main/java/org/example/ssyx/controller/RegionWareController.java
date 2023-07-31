@@ -43,8 +43,23 @@ public class RegionWareController {
     添加开通区域
      */
     @ApiOperation(" 添加开通区域")
+    @PostMapping("save")
     public Result addRegionWare(@RequestBody RegionWare regionWare) {
         regionWareService.saveRegionWare(regionWare);
+        return Result.ok(null);
+    }
+
+    @ApiOperation("删除开通区域")
+    @DeleteMapping("remove/{id}")
+    public Result delete(@PathVariable Long id){
+        regionWareService.removeById(id);
+        return Result.ok(null);
+    }
+
+    @ApiOperation("取消开通区域")
+    @PostMapping("update/{id}/{status}")
+    public Result updateStatus(@PathVariable Long id,@PathVariable Integer status){
+        regionWareService.updateStatus(id, status);
         return Result.ok(null);
     }
 

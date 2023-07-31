@@ -19,7 +19,7 @@ public class CodeGenerator {
         // 2、全局配置
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-        gc.setOutputDir("D:\\project\\ssyx-parent\\service\\service-sys" + "/src/main/java");
+        gc.setOutputDir("D:\\project\\ssyx-parent\\service\\service-product" + "/src/main/java");
 
         gc.setServiceName("%sService");    //去掉Service接口的首字母I
         gc.setOpen(false);
@@ -27,7 +27,7 @@ public class CodeGenerator {
 
         // 3、数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/shequ-sys?serverTimezone=GMT%2B8&useSSL=false");
+        dsc.setUrl("jdbc:mysql://localhost:3306/shequ-product?serverTimezone=GMT%2B8&useSSL=false");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("root");
@@ -37,7 +37,7 @@ public class CodeGenerator {
         // 4、包配置
         PackageConfig pc = new PackageConfig();
         pc.setParent("org.example");
-        pc.setModuleName("ssyx"); //模块名
+        pc.setModuleName("product"); //模块名
         pc.setController("controller");
         pc.setService("service");
         pc.setMapper("mapper");
@@ -46,7 +46,7 @@ public class CodeGenerator {
         // 5、策略配置
         StrategyConfig strategy = new StrategyConfig();
 
-        strategy.setInclude("ware","region","region_ware");
+        strategy.setInclude("attr","attr_group","category","sku_info","attr_value","sku_image","sku_poster","sku_attr_value");
 
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
 

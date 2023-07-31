@@ -20,6 +20,7 @@
         <module>common-util</module>
         <module>service-util</module>
         <module>commonm</module>
+        <module>service/service-product</module>
     </modules>
 
     <properties>
