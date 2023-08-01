@@ -3,6 +3,8 @@ package org.example.product.service;
 import org.example.product.entity.Attr;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
  * <p>
  * 商品属性 服务类
@@ -13,4 +15,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface AttrService extends IService<Attr> {
 
+    List<Attr> getAttrListById(Long groupId);
 }
