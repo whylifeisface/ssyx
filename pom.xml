@@ -109,6 +109,11 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+<!--    <properties>-->
+<!--        <maven.compiler.source>1.8</maven.compiler.source>-->
+<!--        <maven.compiler.target>1.8</maven.compiler.target>-->
+<!--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+<!--    </properties>-->
     <repositories>
         <repository>
             <id>nexus-aliyun</id>
@@ -133,4 +138,5 @@
             </snapshots>
         </repository>
     </repositories>
+
 </project>

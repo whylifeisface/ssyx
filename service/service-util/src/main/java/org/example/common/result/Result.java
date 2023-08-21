@@ -49,7 +49,9 @@ public class Result<T> {
         Result<T> result = build(data, ResultCodeEnum.SUCCESS);
         return result;
     }
-
+    public static <T> Result<T> ok() {
+       return build(null, ResultCodeEnum.SUCCESS);
+    }
     //失败的方法
     public static <T> Result<T> fail(T data) {
         return build(data, ResultCodeEnum.FAIL);
