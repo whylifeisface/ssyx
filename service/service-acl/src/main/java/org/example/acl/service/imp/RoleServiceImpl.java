@@ -26,6 +26,7 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role>
         if(!StringUtils.isEmpty(roleName)) {
             //封装条件
             wrapper.like(Role::getRoleName,roleName);
+//            wrapper.eq(Role::getIsDeleted, 0);
         }
         //调用mapper方法实现条件分页查询
         IPage<Role> pageModel = baseMapper.selectPage(pageParam, wrapper);
