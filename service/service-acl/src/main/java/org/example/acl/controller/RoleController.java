@@ -76,10 +76,11 @@ public class RoleController {
         return Result.ok();
     }
 
-    @Transactional
-    @ApiOperation(value = "测试")
-    @GetMapping("/list")
-    public Result list() {
-        return Result.ok(roleService.list());
-    }
+//    @Transactional
+//    @ApiOperation(value = "测试")
+//    @GetMapping("/list")
+//    public Result list() {
+//        return Result.ok(roleService.list());
+//    }
+
 }
