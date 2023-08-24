@@ -44,3 +44,17 @@
 @TableLogic 这样写 每次查询会带  is null
 
 导致上面的问题出现了
+
+
+ `No MyBatis mapper was found in 
+'[org.example.sys.mapper]' package
+ `
+ 
+
+### spring boot项目不报错但是启动不了
+spring-web 依赖 更换为spring boot -start-web
+
+
+### There is already 'regionController' bean method
+
+@requestMapping 中有重复s
