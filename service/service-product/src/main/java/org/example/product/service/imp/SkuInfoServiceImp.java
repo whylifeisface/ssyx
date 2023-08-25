@@ -27,6 +27,17 @@ import java.util.List;
 
 @Service
 public class SkuInfoServiceImp extends ServiceImpl<SkuInfoMapper, SkuInfo> implements SkuInfoService {
+    @Autowired
+    private SkuPosterService skuPosterService;
+
+    @Autowired
+    private SkuImageService skuImagesService;
+
+    @Autowired
+    private SkuAttrValueService skuAttrValueService;
+
+    @Autowired
+    private SkuInfoMapper skuInfoMapper;
     /*
     获取sku分页列表
      */
@@ -58,14 +69,7 @@ public class SkuInfoServiceImp extends ServiceImpl<SkuInfoMapper, SkuInfo> imple
         return skuInfoPage;
     }
 
-    @Autowired
-    private SkuPosterService skuPosterService;
 
-    @Autowired
-    private SkuImageService skuImagesService;
-
-    @Autowired
-    private SkuAttrValueService skuAttrValueService;
     //添加商品
     @Transactional(rollbackFor = {Exception.class})
     @Override
@@ -201,8 +205,7 @@ public class SkuInfoServiceImp extends ServiceImpl<SkuInfoMapper, SkuInfo> imple
             skuInfoMapper.updateById(skuInfoUp);
         }
 
-    @Autowired
-    private SkuInfoMapper skuInfoMapper;
+
     private SkuInfoVo getSkuInfoDB(Long skuId) {
         SkuInfoVo skuInfoVo = new SkuInfoVo();
 

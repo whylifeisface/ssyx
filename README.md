@@ -57,4 +57,24 @@ spring-web 依赖 更换为spring boot -start-web
 
 ### There is already 'regionController' bean method
 
+
 @requestMapping 中有重复s
+## nacos 如何启动
+** -----
+
+cd D:\nacos-server-2.2.2\nacos\bin
+startup.cmd -m standalone。  -> startup.cmd   先启动navicat 随便查询一点什么 
+
+
+** ------------------
+
+[地址](http://localhost:8848/nacos/)
+
+
+### Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'distroFilterRegistration'
+
+配置修改过 直接startup.cmd  
+
+
+#### Field skuImagesService in org.example.product.service.imp.SkuInfoServiceImp required a single bean, but 2 were found:Field skuImagesService in org.example.product.service.imp.SkuInfoServiceImp required a single bean, but 2 were found:
+啊  这也错?
