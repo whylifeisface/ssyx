@@ -78,3 +78,29 @@ startup.cmd -m standalone。  -> startup.cmd   先启动navicat 随便查询一�
 
 #### Field skuImagesService in org.example.product.service.imp.SkuInfoServiceImp required a single bean, but 2 were found:Field skuImagesService in org.example.product.service.imp.SkuInfoServiceImp required a single bean, but 2 were found:
 啊  这也错?
+
+
+### docker 一直starting 
+
+查看cpu是否开启虚化
+
+查看windows 功能是否开启 htype-v
+
+
+###  Docker failed to initialize
+delete C:\Users\Administrator\AppData\Roaming\Docker 
+
+
+http://localhost:9200
+http://localhost:5601
+
+
+### elasticsearch exit 78
+sysctl -w vm.max_map_count=262144
+sysctl ‐p --使其生效
+
+docker exec -it -u root d63c9d948753ab141d753b0424dacc942965e4c263c5a24561ccd385815b59ac /bin/bash
+
+sysctl -a |grep vm.max_map_count
+
+docker run -d --name es -p 9200:9200 -p 9300:9300 -e ES_JAVA_OPTS="-Xms512m -Xmx512m" 0a61551b302003765c449a9530f5d07713b04182c8f8f3dccd35870303935add
