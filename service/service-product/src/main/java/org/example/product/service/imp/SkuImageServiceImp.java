@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 
-@Service
+
 public class SkuImageServiceImp extends ServiceImpl<SkuImageMapper, SkuImage> implements SkuImageService {
     @Override
     public List<SkuImage> findBySkuId(Long skuId) {

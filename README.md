@@ -77,7 +77,8 @@ startup.cmd -m standalone。  -> startup.cmd   先启动navicat 随便查询一�
 
 
 #### Field skuImagesService in org.example.product.service.imp.SkuInfoServiceImp required a single bean, but 2 were found:Field skuImagesService in org.example.product.service.imp.SkuInfoServiceImp required a single bean, but 2 were found:
-啊  这也错?
+啊  这也错?  //
+把 spring-web 依赖变成 spring-boot-start-web
 
 
 ### docker 一直starting 
