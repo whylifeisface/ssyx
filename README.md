@@ -105,3 +105,27 @@ docker exec -it -u root d63c9d948753ab141d753b0424dacc942965e4c263c5a24561ccd385
 sysctl -a |grep vm.max_map_count
 
 docker run -d --name es -p 9200:9200 -p 9300:9300 -e ES_JAVA_OPTS="-Xms512m -Xmx512m" 0a61551b302003765c449a9530f5d07713b04182c8f8f3dccd35870303935add
+
+
+### centos 查看ip 
+**ip address**  
+**查看防火墙状态** systemctl status firewalld.service
+**关闭防火墙** systemctl stop firewalld.service
+
+### winscp 连接成功
+跟新winscp
+
+yum 添加aliyun源
+
+### Is the docker daemon running 
+service docker start
+
+### docker 配置elasticsearch kibana
+
+docker run --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node"
+-e ES_JAVA_OPTS="-Xms128m -XMx512m" -v /home/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+-v /home/data:/usr/share/elasticsearch/data -v /home/plugins:/usr/share/elasticsearch/plugins
+
+## Docker移除容器命令列表
+
+docker rm [OPTIONS] CONTAINER [CONTAINER...]
