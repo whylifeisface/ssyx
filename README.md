@@ -121,7 +121,7 @@ yum 添加aliyun源
 service docker start
 
 ### docker 配置elasticsearch kibana
-
+[地址](https://zhuanlan.zhihu.com/p/610935604)
 docker run --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node"
 -e ES_JAVA_OPTS="-Xms128m -XMx512m" -v /home/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
 -v /home/data:/usr/share/elasticsearch/data -v /home/plugins:/usr/share/elasticsearch/plugins
@@ -129,3 +129,40 @@ docker run --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=sin
 ## Docker移除容器命令列表
 
 docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+https://segmentfault.com/a/1190000042220239
+### xshell
+复制：Ctrl+Insert
+
+粘贴：Shift+Insert
+
+docker run -d \
+--name es \
+-e "discovery.type=single-node" \
+-p 9200:9200 \
+-p 9300:9300 \
+b1179d41a7b4
+
+
+
+
+[//]: # (docker run -e ES_JAVA_OPTS="-Xms2g-Xms2g" \)
+
+[//]: # (   -d \)
+
+[//]: # (   -p 9200:9200 -p 9300:9300  \)
+
+[//]: # (   -v /home/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml \)
+
+[//]: # (-v /home/elasticsearch/data:/usr/share/elasticsearch/data \)
+
+[//]: # (-v /home/elasticsearch/plugins:/usr/share/elasticsearch/plugins \)
+
+[//]: # (   -v /root/ES/data:/usr/share/elasticsearch/data  --name ES b1179d41a7b4 )
+
+https://blog.csdn.net/javaboyweng/article/details/130880160
+
+
+都给我哭 终于好了 es 和kibana 差一个分词器
+
+https://blog.csdn.net/cn_ljr/article/details/131873443
