@@ -166,3 +166,11 @@ https://blog.csdn.net/javaboyweng/article/details/130880160
 都给我哭 终于好了 es 和kibana 差一个分词器
 
 https://blog.csdn.net/cn_ljr/article/details/131873443
+
+
+## rabbitmq
+[地址](http://localhost:15672).
+
+账号: guest
+
+密码: guest

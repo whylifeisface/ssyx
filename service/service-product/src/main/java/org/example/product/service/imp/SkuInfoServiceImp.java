@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import constant.MqConst;
 import org.example.model.product.SkuAttrValue;
 import org.example.model.product.SkuImage;
 import org.example.model.product.SkuInfo;
@@ -15,12 +16,14 @@ import org.example.product.service.SkuInfoService;
 import org.example.product.service.SkuPosterService;
 import org.example.vo.product.SkuInfoQueryVo;
 import org.example.vo.product.SkuInfoVo;
+import org.springframework.amqp.rabbit.connection.RabbitAccessor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
+import service.RabbitService;
 
 import java.util.List;
 
@@ -30,6 +33,8 @@ public class SkuInfoServiceImp extends ServiceImpl<SkuInfoMapper, SkuInfo> imple
     @Autowired
     private SkuPosterService skuPosterService;
 
+    @Autowired
+    private RabbitService rabbitService;
     @Autowired
     private SkuImageService skuImagesService;
 
@@ -187,13 +192,14 @@ public class SkuInfoServiceImp extends ServiceImpl<SkuInfoMapper, SkuInfo> imple
             skuInfoUp.setId(skuId);
             skuInfoUp.setPublishStatus(1);
             skuInfoMapper.updateById(skuInfoUp);
-            //TODO 商品上架 后续会完善：发送mq消息更新es数据
+            rabbitService.sendMessage(MqConst.EXCHANGE_GOODS_DIRECT, MqConst.ROUTING_GOODS_UPPER, skuId);
+
         } else {
             SkuInfo skuInfoUp = new SkuInfo();
             skuInfoUp.setId(skuId);
             skuInfoUp.setPublishStatus(0);
             skuInfoMapper.updateById(skuInfoUp);
-            //TODO 商品下架 后续会完善：发送mq消息更新es数据
+            rabbitService.sendMessage(MqConst.EXCHANGE_GOODS_DIRECT, MqConst.ROUTING_GOODS_LOWER, skuId);
         }
     }
 

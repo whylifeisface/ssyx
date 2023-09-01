@@ -15,6 +15,7 @@
         <module>service-util</module>
         <module>service-acl</module>
         <module>service-sys</module>
+        <module>service-activity</module>
     </modules>
     <dependencies>
         <!--服务注册-->
