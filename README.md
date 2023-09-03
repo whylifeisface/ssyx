@@ -174,3 +174,6 @@ https://blog.csdn.net/cn_ljr/article/details/131873443
 账号: guest
 
 密码: guest
+
+
+搞一上午gcc 一直隔这缺依赖  yum 又用不了  唉 估计还要搞几天yum
