@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.example.common.config.RabbitService;
+import org.example.common.constant.MqConst;
 import org.example.model.product.SkuAttrValue;
 import org.example.model.product.SkuImage;
 import org.example.model.product.SkuInfo;
@@ -38,6 +40,9 @@ public class SkuInfoServiceImp extends ServiceImpl<SkuInfoMapper, SkuInfo> imple
 
     @Autowired
     private SkuInfoMapper skuInfoMapper;
+
+    @Autowired
+    private RabbitService rabbitService;
     /*
     获取sku分页列表
      */
@@ -187,13 +192,13 @@ public class SkuInfoServiceImp extends ServiceImpl<SkuInfoMapper, SkuInfo> imple
             skuInfoUp.setId(skuId);
             skuInfoUp.setPublishStatus(1);
             skuInfoMapper.updateById(skuInfoUp);
-            //TODO 商品上架 后续会完善：发送mq消息更新es数据
+            rabbitService.sendMessage(MqConst.EXCHANGE_GOODS_DIRECT, MqConst.ROUTING_GOODS_UPPER, skuId);
         } else {
             SkuInfo skuInfoUp = new SkuInfo();
             skuInfoUp.setId(skuId);
             skuInfoUp.setPublishStatus(0);
             skuInfoMapper.updateById(skuInfoUp);
-            //TODO 商品下架 后续会完善：发送mq消息更新es数据
+            rabbitService.sendMessage(MqConst.EXCHANGE_GOODS_DIRECT, MqConst.ROUTING_GOODS_LOWER, skuId);
         }
     }
 

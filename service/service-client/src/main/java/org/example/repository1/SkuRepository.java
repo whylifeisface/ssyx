@@ -1,4 +1,8 @@
 package org.example.repository1;
 
-public class SkuRepository {
+import org.example.model.search.SkuEs;
+import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
+
+public interface SkuRepository  extends ElasticsearchRepository<SkuEs, Long> {
+
 }
