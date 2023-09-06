@@ -14,6 +14,6 @@ public class SkuApiController {
 
     @Autowired
     private SkuService skuService;
-    @ApiOperation("上架商品")
-    @GetMapping("inner/upperSku/{skuId}")
+//    @ApiOperation("上架商品")
+//    @GetMapping("inner/upperSku/{skuId}")
 }
