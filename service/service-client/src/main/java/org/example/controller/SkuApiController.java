@@ -35,4 +35,3 @@ public class SkuApiController {
         return Result.ok();
     }
 }
-}

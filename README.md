@@ -62,14 +62,14 @@ spring-web 依赖 更换为spring boot -start-web
 ## nacos 如何启动
 ** -----
 
-cd D:\nacos-server-2.2.2\nacos\bin
+cd D:\nacos-server-2.2.2\nacos\bin  D:\nacos-server-2.2.3\nacos\bin
 startup.cmd -m standalone。  -> startup.cmd   先启动navicat 随便查询一点什么 
 
 
 ** ------------------
 
 [地址](http://localhost:8848/nacos/)
-
+Exception please set java_home in your
 
 ### Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'distroFilterRegistration'
 
