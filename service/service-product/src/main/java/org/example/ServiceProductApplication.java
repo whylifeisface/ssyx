@@ -8,7 +8,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@MapperScan("org.example.product")
+@MapperScan(basePackages = "org.example.product.mapper")
 public class ServiceProductApplication {
     public static void main(String[] args) {
         SpringApplication.run(ServiceProductApplication.class, args);

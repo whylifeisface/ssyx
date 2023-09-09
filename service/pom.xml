@@ -15,8 +15,6 @@
         <module>service-util</module>
         <module>service-acl</module>
         <module>service-sys</module>
-        <module>service-search</module>
-        <module>service-client</module>
     </modules>
     <dependencies>
         <!--服务注册-->
@@ -25,9 +23,18 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
             <version>2021.1</version>
+
         </dependency>
 
-
+        <dependency>
+            <groupId>in.hocg.boot</groupId>
+            <artifactId>mybatis-plus-spring-boot-starter</artifactId>
+            <version>1.0.57</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
     </dependencies>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

@@ -23,8 +23,7 @@ public class AttrGroupServiceImp extends ServiceImpl<AttrGroupMapper, AttrGroup>
         if (!StringUtils.isEmpty(name)) {
             wrapper.like(AttrGroup::getName,name);
         }
-        IPage<AttrGroup> attrGroupPage = baseMapper.selectPage(pageParam, wrapper);
-        return attrGroupPage;
+        return baseMapper.selectPage(pageParam, wrapper);
     }
 
     //查询所有属性分组

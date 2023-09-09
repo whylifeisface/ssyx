@@ -22,7 +22,7 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> i
     public IPage<Category> selectPage(Page<Category> pageParam, CategoryQueryVo categoryQueryVo) {
         String name = categoryQueryVo.getName();
         LambdaQueryWrapper<Category> queryWrapper = new LambdaQueryWrapper<>();
-        if(!StringUtils.isEmpty(name)) {
+        if(!StringUtils.isBlank(name)) {
             queryWrapper.like(Category::getName,name);
         }
         IPage<Category> categoryPage = baseMapper.selectPage(pageParam, queryWrapper);

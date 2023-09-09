@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public interface SkuImageService extends IService<SkuImage> {
     List<SkuImage> findBySkuId(Long skuId);
 }

@@ -2,15 +2,17 @@ package org.example.search;
 
 
 import io.swagger.annotations.ApiOperation;
-import org.checkerframework.checker.units.qual.A;
 import org.example.model.product.Category;
 import org.example.model.product.SkuInfo;
 import org.example.product.service.CategoryService;
 import org.example.product.service.SkuInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 
+
+@RestController
+@RequestMapping("api/product")
+//@SuppressWarnings({"unchecked", "rawtypes"})
 public class ProductInnnerController {
 
     @Autowired
@@ -19,7 +21,7 @@ public class ProductInnnerController {
     private SkuInfoService skuInfoService;
 
     @ApiOperation(value = "根据分类id获取分类信息")
-    @GetMapping("inner/getCategory/{categoryId}")
+    @PostMapping("inner/getCategory/{categoryId}")
     public Category getCategory(@PathVariable Long categoryId) {
         return categoryService.getById(categoryId);
     }

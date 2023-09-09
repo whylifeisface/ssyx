@@ -6,5 +6,7 @@ import org.example.model.product.Attr;
 import java.util.List;
 
 public interface AttrService extends IService<Attr> {
+
     List<Attr> findByAttrGroupId(Long attrGroupId);
+
 }

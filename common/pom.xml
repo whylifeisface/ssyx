@@ -14,7 +14,8 @@
 
     <modules>
         <module>common-util</module>
-<!--        <module>service-util</module>-->
+        <module>rabbit_util</module>
+        <!--        <module>service-util</module>-->
     </modules>
 
     <dependencies>

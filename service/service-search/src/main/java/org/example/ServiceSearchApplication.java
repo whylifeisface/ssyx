@@ -10,6 +10,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableDiscoveryClient
 @EnableFeignClients
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+//
 public class ServiceSearchApplication {
 
     public static void main(String[] args) {
