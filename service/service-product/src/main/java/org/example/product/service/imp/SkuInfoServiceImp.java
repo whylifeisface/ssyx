@@ -4,13 +4,17 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import constant.MqConst;
+import org.example.common.config.RabbitService;
+import org.example.common.constant.MqConst;
 import org.example.model.product.SkuAttrValue;
 import org.example.model.product.SkuImage;
 import org.example.model.product.SkuInfo;
 import org.example.model.product.SkuPoster;
 import org.example.product.mapper.SkuInfoMapper;
-import org.example.product.service.*;
+import org.example.product.service.SkuAttrValueService;
+import org.example.product.service.SkuImageService;
+import org.example.product.service.SkuInfoService;
+import org.example.product.service.SkuPosterService;
 import org.example.vo.product.SkuInfoQueryVo;
 import org.example.vo.product.SkuInfoVo;
 import org.springframework.beans.BeanUtils;
@@ -29,8 +33,6 @@ public class SkuInfoServiceImp extends ServiceImpl<SkuInfoMapper, SkuInfo> imple
     private SkuPosterService skuPosterService;
 
     @Autowired
-    private RabbitService rabbitService;
-    @Autowired
     private SkuImageService skuImagesService;
 
     @Autowired
@@ -38,6 +40,9 @@ public class SkuInfoServiceImp extends ServiceImpl<SkuInfoMapper, SkuInfo> imple
 
     @Autowired
     private SkuInfoMapper skuInfoMapper;
+
+    @Autowired
+    private RabbitService rabbitService;
     /*
     获取sku分页列表
      */
@@ -188,7 +193,6 @@ public class SkuInfoServiceImp extends ServiceImpl<SkuInfoMapper, SkuInfo> imple
             skuInfoUp.setPublishStatus(1);
             skuInfoMapper.updateById(skuInfoUp);
             rabbitService.sendMessage(MqConst.EXCHANGE_GOODS_DIRECT, MqConst.ROUTING_GOODS_UPPER, skuId);
-
         } else {
             SkuInfo skuInfoUp = new SkuInfo();
             skuInfoUp.setId(skuId);
