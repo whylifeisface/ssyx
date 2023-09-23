@@ -12,9 +12,13 @@
     <artifactId>service</artifactId>
     <packaging>pom</packaging>
     <modules>
+        <module>service-client</module>
+        <module>service-client/service-product-client</module>
+        <module>service-activity</module>
         <module>service-util</module>
         <module>service-acl</module>
         <module>service-sys</module>
+        <module>service-search</module>
     </modules>
     <dependencies>
         <!--服务注册-->

@@ -43,6 +43,7 @@
             <artifactId>spring-cloud-starter-openfeign</artifactId>
             <scope>provided </scope>
         </dependency>
+
         <dependency>
             <groupId>org.example</groupId>
             <artifactId>service-client</artifactId>

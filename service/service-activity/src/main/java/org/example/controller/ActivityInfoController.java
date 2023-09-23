@@ -7,6 +7,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.example.common.result.Result;
 import org.example.model.activity.ActivityInfo;
+import org.example.service.ActivityInfoService;
 import org.example.service.impl.ActivityInfoServiceImp;
 import org.example.vo.activity.ActivityRuleVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ import java.util.List;
 @RequestMapping("/admin/activity/activityinfo")
 public class ActivityInfoController {
     @Autowired
-    private ActivityInfoServiceImp activityInfoServiceImp;
+    private ActivityInfoService activityInfoServiceImp;
 
     @ApiOperation(value = "获取分页列表")
     @GetMapping("{page}/{limit}")
