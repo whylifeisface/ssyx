@@ -1,7 +1,7 @@
 package org.example.search.receiver;
 
 import com.rabbitmq.client.Channel;
-import org.example.common.constant.MqConst;
+import constant.MqConst;
 import org.example.service.SkuService;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.Exchange;

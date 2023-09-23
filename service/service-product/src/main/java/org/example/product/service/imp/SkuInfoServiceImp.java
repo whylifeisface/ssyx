@@ -4,17 +4,13 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.example.common.config.RabbitService;
-import org.example.common.constant.MqConst;
+import constant.MqConst;
 import org.example.model.product.SkuAttrValue;
 import org.example.model.product.SkuImage;
 import org.example.model.product.SkuInfo;
 import org.example.model.product.SkuPoster;
 import org.example.product.mapper.SkuInfoMapper;
-import org.example.product.service.SkuAttrValueService;
-import org.example.product.service.SkuImageService;
-import org.example.product.service.SkuInfoService;
-import org.example.product.service.SkuPosterService;
+import org.example.product.service.*;
 import org.example.vo.product.SkuInfoQueryVo;
 import org.example.vo.product.SkuInfoVo;
 import org.springframework.beans.BeanUtils;
@@ -23,6 +19,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
+import service.RabbitService;
 
 import java.util.List;
 
@@ -41,7 +38,7 @@ public class SkuInfoServiceImp extends ServiceImpl<SkuInfoMapper, SkuInfo> imple
     @Autowired
     private SkuInfoMapper skuInfoMapper;
 
-    @Autowired
+    @Autowired(required = false)
     private RabbitService rabbitService;
     /*
     获取sku分页列表

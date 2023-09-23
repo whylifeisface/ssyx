@@ -6,6 +6,9 @@ import org.example.model.product.SkuInfo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.List;
 
 @FeignClient(value = "service-product")
 
@@ -15,4 +18,10 @@ public interface ProductFeignClient {
 
     @GetMapping("/api/product/inner/getSkuInfo/{skuId}")
     public SkuInfo getSkuInfo(@PathVariable("skuId") Long skuId);
+
+    @GetMapping("api/product/inner/findSkuInfoList/")
+    List<SkuInfo> findSkuInfoList(@RequestBody List<Long> skuIdList);
+
+    @GetMapping("api/product/inner/finSkuInfoByKeyword/")
+    List<SkuInfo> finSkuInfoByKeyword(@RequestBody String keyword);
 }

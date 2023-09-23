@@ -1,6 +1,5 @@
 package org.example.product.service;
 
-
 import org.springframework.amqp.AmqpException;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessagePostProcessor;
@@ -10,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class RabbitService {
-
     /*
     映入rabbitmq 模板
      */
@@ -48,5 +46,4 @@ public class RabbitService {
         });
         return true;
     }
-
 }
