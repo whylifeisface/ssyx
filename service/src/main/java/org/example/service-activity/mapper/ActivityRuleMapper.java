@@ -1,7 +1,7 @@
-package org.example.mapper;
+package org.example.service-activity.mapper;
 
+import org.example.service-activity.entity.ActivityRule;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.example.model.activity.ActivityRule;
 
 /**
  * <p>

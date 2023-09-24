@@ -177,3 +177,7 @@ https://blog.csdn.net/cn_ljr/article/details/131873443
 
 
 搞一上午gcc 老是失败 缺依赖
+
+
+### MySQL 8.0 Public Key Retrieval is not allowed
+allowPublicKeyRetrieval=true&useSSL=false
