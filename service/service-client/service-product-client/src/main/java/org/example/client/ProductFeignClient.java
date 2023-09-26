@@ -23,7 +23,8 @@ public interface ProductFeignClient {
     List<SkuInfo> findSkuInfoList(@RequestBody List<Long> skuIdList);
 
     @GetMapping("api/product/inner/finSkuInfoByKeyword/")
-    List<SkuInfo> finSkuInfoByKeyword(@RequestBody String keyword);
+    List<SkuInfo> finSkuInfoByKeyword(@PathVariable String keyword);
 
-
+    @GetMapping("api/product/inner/finCategoryList/")
+    List<Category> finCategoryList(@RequestBody List<Long> randList);
 }

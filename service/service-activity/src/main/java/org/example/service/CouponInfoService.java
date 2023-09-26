@@ -3,6 +3,7 @@ package org.example.service;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.example.model.activity.CouponInfo;
+import org.example.vo.activity.CouponRuleVo;
 
 import java.util.Map;
 
@@ -20,4 +21,5 @@ public interface CouponInfoService extends IService<CouponInfo> {
 
     Map<String, Object> findCouponRuleList(Long id);
 
+    void saveCouponRule(CouponRuleVo couponRuleVo);
 }

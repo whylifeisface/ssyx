@@ -9,6 +9,8 @@ import org.example.product.service.SkuInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @RestController
 @RequestMapping("api/product")
@@ -30,5 +32,10 @@ public class ProductInnnerController {
     @GetMapping("inner/getSkuInfo/{skuId}")
     public SkuInfo getSkuInfo(@PathVariable("skuId") Long skuId) {
         return skuInfoService.getById(skuId);
+    }
+
+    @PostMapping("inner/finSkuInfoByKeyword/")
+    List<Category> finCategoryList(@RequestBody List<Long> randList){
+        return categoryService.listByIds(randList);
     }
 }

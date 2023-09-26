@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.example.common.result.Result;
 import org.example.model.activity.CouponInfo;
 import org.example.service.CouponInfoService;
+import org.example.vo.activity.CouponRuleVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -66,6 +67,13 @@ public class CouponInfoController {
     return Result.ok(map);
     }
 
+
+    //添加优惠券规则 数据
+    @PostMapping("saveCouponRule")
+    public Result saveCouponRule(@RequestBody CouponRuleVo couponRuleVo){
+        couponInfoService.saveCouponRule(couponRuleVo);
+
+    }
 
 }
 

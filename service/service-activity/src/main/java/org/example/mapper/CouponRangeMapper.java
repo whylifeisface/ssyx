@@ -3,6 +3,7 @@ package org.example.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.example.model.activity.CouponRange;
+import org.springframework.stereotype.Repository;
 
 /**
  * <p>
@@ -12,6 +13,7 @@ import org.example.model.activity.CouponRange;
  * @author ssyx
  * @since 2023-09-24
  */
+@Repository
 public interface CouponRangeMapper extends BaseMapper<CouponRange> {
 
 }
